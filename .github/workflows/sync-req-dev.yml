@@ -1,0 +1,77 @@
+name: Sync Requirements-Dev File to All Repos
+
+on:
+  workflow_dispatch:  # run manually
+
+jobs:
+  sync-requirements-dev:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout .github repo (templates)
+        uses: actions/checkout@v4
+        with:
+          repository: civic-interconnect/.github
+          path: source
+
+      - name: Set up GitHub CLI
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gh
+          echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
+
+      - name: Sync requirements-dev.txt via PR
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          REPOS=(
+            agents-maintenance-dashboard
+            agents-monitor-bills
+            agents-monitor-elections
+            agents-monitor-mappings
+            agents-monitor-people
+            agents-monitor-schema
+            app-reps
+            civic-interconnect-lib
+            civic-lib-boundaries
+            civic-lib-geo
+            civic-lib-ocd
+            civic-lib-snapshots
+            civic-lib-ui
+          )
+
+          for REPO in "${REPOS[@]}"; do
+            echo "Processing $REPO"
+            git clone "https://github.com/civic-interconnect/$REPO.git"
+            cd "$REPO"
+
+            git checkout -b chore/update-requirements-dev
+
+            if [[ "$REPO" == civic-lib-* || "$REPO" == civic-interconnect-lib ]]; then
+              cp ../source/templates/requirements-dev-lib.txt requirements-dev.txt
+            else
+              cp ../source/templates/requirements-dev.txt requirements-dev.txt
+            fi
+
+            git config user.name "Civic Interconnect Bot"
+            git config user.email "ci@civic-interconnect.org"
+            git add requirements-dev.txt
+
+            if git diff --cached --quiet; then
+              echo "No changes for $REPO"
+              cd ..
+              continue
+            fi
+
+            git commit -m "Sync requirements-dev.txt from org template"
+            git push origin chore/update-requirements-dev
+
+            gh pr create \
+              --repo civic-interconnect/$REPO \
+              --head chore/update-requirements-dev \
+              --base main \
+              --title "chore: sync requirements-dev.txt from org template" \
+              --body "Automated sync of requirements-dev.txt from civic-interconnect/.github"
+
+            cd ..
+            rm -rf "$REPO"  # Clean up cloned repo
+          done

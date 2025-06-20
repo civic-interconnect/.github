@@ -1,0 +1,8 @@
+# ======================================================
+# ESSENTIAL EXTERNAL TOOLS
+# ======================================================
+
+# Up-to-date package management tools
+pip
+setuptools
+wheel

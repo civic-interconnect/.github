@@ -1,0 +1,84 @@
+name: Sync Standard Files to All Repos
+
+on:
+  workflow_dispatch: # Manual trigger
+
+jobs:
+  sync-std-files:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout civic-interconnect/.github
+        uses: actions/checkout@v4
+        with:
+          repository: civic-interconnect/.github
+          path: source
+
+      - name: Set up GitHub CLI
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gh
+          echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
+
+      - name: Sync standard files to each repo via PR
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          REPOS=(
+            agents-maintenance-dashboard
+            agents-monitor-bills
+            agents-monitor-elections
+            agents-monitor-mappings
+            agents-monitor-people
+            agents-monitor-schema
+            app-reps
+            civic-interconnect-lib
+            civic-lib-boundaries
+            civic-lib-geo
+            civic-lib-ocd
+            civic-lib-snapshots
+            civic-lib-ui
+          )
+
+          FILES=(
+            _ci_bump_version.py
+            _ci_release.ps1
+            .gitattributes
+            .gitignore
+            .pre-commit-config.yaml
+            LICENSE
+            REF_DEV.md
+          )
+
+          for REPO in "${REPOS[@]}"; do
+            echo "Processing $REPO..."
+            git clone "https://github.com/civic-interconnect/$REPO.git"
+            cd "$REPO"
+            git checkout -b chore/sync-std-files
+
+            for FILE in "${FILES[@]}"; do
+              cp ../source/$FILE $FILE
+            done
+
+            git config user.name "Civic Interconnect Bot"
+            git config user.email "ci@civic-interconnect.org"
+            git add "${FILES[@]}"
+
+            if git diff --cached --quiet; then
+              echo "No changes for $REPO"
+              cd ..
+              continue
+            fi
+
+            git commit -m "chore: sync standard org files from .github"
+            git push origin chore/sync-std-files
+
+            gh pr create \
+              --repo civic-interconnect/$REPO \
+              --head chore/sync-std-files \
+              --base main \
+              --title "chore: sync standard org files from .github" \
+              --body "Automated sync of standard files from civic-interconnect/.github"
+
+            cd ..
+            rm -rf "$REPO"  # Clean up cloned repo
+          done
