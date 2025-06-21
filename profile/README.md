@@ -9,9 +9,7 @@
 [![People Agent](https://github.com/civic-interconnect/agents-monitor-people/actions/workflows/agent-runner.yml/badge.svg)](https://github.com/civic-interconnect/agents-monitor-people/actions/workflows/agent-runner.yml)
 [![Lib Tests](https://github.com/civic-interconnect/civic-lib-core/actions/workflows/lib.yml/badge.svg)](https://github.com/civic-interconnect/civic-lib-core/actions/workflows/lib.yml)
 
-> Connecting civic data from public sources.
-
-Goal: support transparency, interoperability, and civic insights.
+> Connecting civic data from public sources to support transparency, interoperability, and civic insights.
 
 ## Live Agent Dashboard
 
@@ -31,16 +29,20 @@ Goal: support transparency, interoperability, and civic insights.
 - **[agents-monitor-people](https://github.com/civic-interconnect/agents-monitor-people)**
   Track elected official changes and affiliations.
 
+## Data
+
+- **[civic-data-boundaries-us](https://github.com/civic-interconnect/civic-data-boundaries-us)**
+  Core geographic data for U.S. civic areas.
+
 ## Shared Libraries
 
-- **[civic-interconnect-lib](https://github.com/civic-interconnect/civic-interconnect-lib)**
+- **[civic-lib-core](https://github.com/civic-interconnect/civic-lib-core)**
   Core library for logging, error handling, and API utilities.
 
 - **[civic-lib-geo](https://github.com/civic-interconnect/civic-lib-geo)**
   Shared geospatial utilities for boundary and mapping operations.
----
 
-## Vision
+## Project Organization
 
 ```text
 civic-interconnect/
@@ -48,29 +50,15 @@ civic-interconnect/
 ├── agents-monitor-bills/
 ├── agents-monitor-schema/
 ├── agents-monitor-people/
-├── agents-monitor-mappings/
+├── agents-monitor-mapping/
 ├── agents-monitor-elections/
-│
-├── civic-lib/
-├── civic-lib-boundaries/
+├── civic-data-boundaries-us/
+├── civic-lib-core/
 ├── civic-lib-geo/
 ├── civic-lib-ocd/
 ├── civic-lib-snapshots/
 ├── civic-lib-ui/
-│
-├── app-reps/
-├── app-jurisdictions/
-├── app-bill-compare/
-├── app-scorecards/
-│
-├── site-website/
-├── site-guides/
-├── site-transparency/
-│
-├── infra-pages/
-├── infra-monitoring/
-│
-└── meta/
+└── app-reps/
 ```
 
 ---
