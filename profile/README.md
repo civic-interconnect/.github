@@ -13,7 +13,7 @@
 
 ## Live Agent Dashboard
 
-- [View the Agent Status Dashboard](https://civic-interconnect.github.io/agents-maintenance-dashboard/)
+- [View the Agent Status Dashboard](https://civic-interconnect.github.io/app-agents/)
 
 ## Current Agents
 
@@ -46,7 +46,6 @@
 
 ```text
 civic-interconnect/
-├── agents-maintenance-dashboard/
 ├── agents-monitor-bills/
 ├── agents-monitor-schema/
 ├── agents-monitor-people/
@@ -58,6 +57,8 @@ civic-interconnect/
 ├── civic-lib-ocd/
 ├── civic-lib-snapshots/
 ├── civic-lib-ui/
+├── app-agents/
+├── app-core/
 └── app-reps/
 ```
 
