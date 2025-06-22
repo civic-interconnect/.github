@@ -15,6 +15,10 @@
 
 - [View the Agent Status Dashboard](https://civic-interconnect.github.io/app-agents/)
 
+## Live Reps App (w/ Placeholder Static Data - in progress)
+
+- [View the Reps App](https://civic-interconnect.github.io/app-reps/)
+
 ## Current Agents
 
 - **[agents-monitor-schema](https://github.com/civic-interconnect/agents-monitor-schema)**
