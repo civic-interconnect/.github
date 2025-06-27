@@ -16,15 +16,18 @@
 
 > Connecting civic data from public sources to support transparency, interoperability, and civic insights.
 
-## Live Agent Dashboard
+## Live Web Apps Running on GitHub Pages
 
+**GeoExplorer** (view US States and Counties) - [repo](https://github.com/civic-interconnect/geo-explorer)
+- [View the GeoExplorer App](https://civic-interconnect.github.io/geo-explorer/)
+
+**Agent Dashboard** - [repo](https://github.com/civic-interconnect/app-agents)
 - [View the Agent Status Dashboard](https://civic-interconnect.github.io/app-agents/)
 
-## Live Reps App (w/ Placeholder Static Data - in progress)
-
+**Reps App** (w/ Placeholder Static Data - in progress) - - [repo](https://github.com/civic-interconnect/app-reps)
 - [View the Reps App](https://civic-interconnect.github.io/app-reps/)
 
-## Current Agents
+## Monitoring Agents
 
 - **[agents-monitor-schema](https://github.com/civic-interconnect/agents-monitor-schema)**
   Monitor Open Civic Data (OCD) and OpenStates schemas for structural changes.
@@ -38,7 +41,7 @@
 - **[agents-monitor-people](https://github.com/civic-interconnect/agents-monitor-people)**
   Track elected official changes and affiliations.
 
-## Data
+## Hosted Data Sources
 
 - **[civic-data-boundaries-us](https://github.com/civic-interconnect/civic-data-boundaries-us)**
   Core geographic data for U.S. civic areas.
@@ -55,20 +58,19 @@
 
 ```text
 civic-interconnect/
+├── geo-explorer/
+├── app-agents/
+├── app-reps/
 ├── agents-monitor-bills/
 ├── agents-monitor-schema/
 ├── agents-monitor-people/
 ├── agents-monitor-mapping/
-├── agents-monitor-elections/
 ├── civic-data-boundaries-us/
 ├── civic-lib-core/
 ├── civic-lib-geo/
 ├── civic-lib-ocd/
 ├── civic-lib-snapshots/
-├── civic-lib-ui/
-├── app-agents/
-├── app-core/
-└── app-reps/
+└── civic-lib-ui/
 ```
 
 ---
