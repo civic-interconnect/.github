@@ -7,8 +7,12 @@
 [![Mapping Agent](https://github.com/civic-interconnect/agents-monitor-mapping/actions/workflows/agent-runner.yml/badge.svg)](https://github.com/civic-interconnect/agents-monitor-mapping/actions/workflows/agent-runner.yml)
 [![Bills Agent](https://github.com/civic-interconnect/agents-monitor-bills/actions/workflows/agent-runner.yml/badge.svg)](https://github.com/civic-interconnect/agents-monitor-bills/actions/workflows/agent-runner.yml)
 [![People Agent](https://github.com/civic-interconnect/agents-monitor-people/actions/workflows/agent-runner.yml/badge.svg)](https://github.com/civic-interconnect/agents-monitor-people/actions/workflows/agent-runner.yml)
-[![Lib Tests](https://github.com/civic-interconnect/civic-lib-core/actions/workflows/lib.yml/badge.svg)](https://github.com/civic-interconnect/civic-lib-core/actions/workflows/lib.yml)
-[![Lib Tests](https://github.com/civic-interconnect/civic-lib-geo/actions/workflows/lib.yml/badge.svg)](https://github.com/civic-interconnect/civic-lib-geo/actions/workflows/lib.yml)
+
+[![Lib Core](https://github.com/civic-interconnect/civic-lib-core/actions/workflows/lib.yml/badge.svg)](https://github.com/civic-interconnect/civic-lib-core/actions/workflows/lib.yml)
+[![Lib Geo](https://github.com/civic-interconnect/civic-lib-geo/actions/workflows/lib.yml/badge.svg)](https://github.com/civic-interconnect/civic-lib-geo/actions/workflows/lib.yml)
+
+[![Data Boundaries](https://github.com/civic-interconnect/civic-data-boundaries-us/actions/workflows/tests.yml/badge.svg)](https://github.com/civic-interconnect/civic-data-boundaries-us/actions/workflows/tests.yml)
+
 
 > Connecting civic data from public sources to support transparency, interoperability, and civic insights.
 
