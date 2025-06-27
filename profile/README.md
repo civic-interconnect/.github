@@ -18,14 +18,12 @@
 
 ## Live Web Apps Running on GitHub Pages
 
-**GeoExplorer** (view US States and Counties) - [repo](https://github.com/civic-interconnect/geo-explorer)
-- [View the GeoExplorer App](https://civic-interconnect.github.io/geo-explorer/)
+| App               | Link                                              |
+|-------------------|---------------------------------------------------|
+| GeoExplorer       | https://civic-interconnect.github.io/geo-explorer/ |
+| Agent Dashboard   | https://civic-interconnect.github.io/app-agents/  |
+| Reps App          | https://civic-interconnect.github.io/app-reps/    |
 
-**Agent Dashboard** - [repo](https://github.com/civic-interconnect/app-agents)
-- [View the Agent Status Dashboard](https://civic-interconnect.github.io/app-agents/)
-
-**Reps App** (w/ Placeholder Static Data - in progress) - - [repo](https://github.com/civic-interconnect/app-reps)
-- [View the Reps App](https://civic-interconnect.github.io/app-reps/)
 
 ## Monitoring Agents
 
