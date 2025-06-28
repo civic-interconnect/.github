@@ -18,11 +18,11 @@
 
 ## Live Web Apps Running on GitHub Pages
 
-| App               | Link                                              |
-|-------------------|---------------------------------------------------|
-| GeoExplorer       | https://civic-interconnect.github.io/geo-explorer/ |
-| Agent Dashboard   | https://civic-interconnect.github.io/app-agents/  |
-| Reps App          | https://civic-interconnect.github.io/app-reps/    |
+| App               | Web App                                        |  Source Repo |
+|-------------------|---------------------------------------------------|--------------|
+| GeoExplorer       | https://civic-interconnect.github.io/geo-explorer/ | [geo-explorer](https://github.com/civic-interconnect/geo-explorer) |
+| Agent Dashboard   | https://civic-interconnect.github.io/app-agents/  | [app-agents](https://github.com/civic-interconnect/app-agents) |
+| Reps App          | https://civic-interconnect.github.io/app-reps/    | [app-reps](https://github.com/civic-interconnect/app-reps) |
 
 
 ## Monitoring Agents
