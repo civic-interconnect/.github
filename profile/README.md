@@ -23,6 +23,7 @@
 | GeoExplorer       | https://civic-interconnect.github.io/geo-explorer/ | [geo-explorer](https://github.com/civic-interconnect/geo-explorer) |
 | Agent Dashboard   | https://civic-interconnect.github.io/app-agents/  | [app-agents](https://github.com/civic-interconnect/app-agents) |
 | Reps App          | https://civic-interconnect.github.io/app-reps/    | [app-reps](https://github.com/civic-interconnect/app-reps) |
+| Knowledge Graph | https://civic-interconnect.github.io/civic-kg/ |  [civic-kg](https://github.com/civic-interconnect/civic-reps) |
 
 
 ## Monitoring Agents
