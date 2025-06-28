@@ -42,7 +42,10 @@
 ## Hosted Data Sources
 
 - **[civic-data-boundaries-us](https://github.com/civic-interconnect/civic-data-boundaries-us)**
-  Core geographic data for U.S. civic areas.
+  Core geographic data for U.S. states and counties.
+
+- **[civic-data-boundaries-us-cd118](https://github.com/civic-interconnect/civic-data-boundaries-us-cd118)**
+  Core geographic data for U.S. 118th Congressional Districts.
 
 ## Shared Libraries
 
