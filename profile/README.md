@@ -50,6 +50,9 @@ Under construction: data and features are prototypes. All work is still in progr
 - **[civic-data-boundaries-us-cd118](https://github.com/civic-interconnect/civic-data-boundaries-us-cd118)**
   Core geographic data for U.S. 118th Congressional Districts.
 
+- **[civic-data-boundaries-us-forests](https://github.com/civic-interconnect/civic-data-boundaries-us-forests)**
+  Core geographic data for U.S. National Forests.
+
 ## Shared Libraries
 
 - **[civic-lib-core](https://github.com/civic-interconnect/civic-lib-core)**
@@ -72,6 +75,7 @@ civic-interconnect/
 ├── agents-monitor-mapping/
 ├── civic-data-boundaries-us/
 ├── civic-data-boundaries-us-cd118/
+├── civic-data-boundaries-us-forests/
 ├── civic-lib-core/
 ├── civic-lib-geo/
 ├── civic-lib-ocd/
