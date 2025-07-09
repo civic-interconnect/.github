@@ -2,6 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![Project Status: In Progress](https://img.shields.io/badge/status-in--progress-yellow)](https://github.com/civic-interconnect)
+[![Civic-Dev CLI](https://github.com/civic-interconnect/civic-dev/actions/workflows/build.yml/badge.svg)](https://github.com/civic-interconnect/civic-dev/actions/workflows/build.yml)
 
 [![Schema Agent](https://github.com/civic-interconnect/agents-monitor-schema/actions/workflows/agent-runner.yml/badge.svg)](https://github.com/civic-interconnect/agents-monitor-schema/actions/workflows/agent-runner.yml)
 [![Mapping Agent](https://github.com/civic-interconnect/agents-monitor-mapping/actions/workflows/agent-runner.yml/badge.svg)](https://github.com/civic-interconnect/agents-monitor-mapping/actions/workflows/agent-runner.yml)
@@ -27,6 +28,11 @@
 | Common Ground    | https://civic-interconnect.github.io/civic-common-ground/ |  [civic-common-ground](https://github.com/civic-interconnect/civic-common-ground) |
 
 Under construction: data and features are prototypes. All work is still in progress.
+
+## New CLI Tool
+
+- **[civic-dev](https://github.com/civic-interconnect/civic-dev)**
+  Command Line tool to facilitate Civic Interconnect projects.
 
 ## Monitoring Agents
 
