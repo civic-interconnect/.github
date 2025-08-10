@@ -29,6 +29,13 @@
 
 Under construction: data and features are prototypes. All work is still in progress.
 
+## Civic Transparency
+
+- **[civic-transparency-spec](https://github.com/civic-interconnect/civic-transparency-spec)**
+- **[civic-transparency-types](https://github.com/civic-interconnect/civic-transparency-types)**
+
+
+
 ## New CLI Tool
 
 - **[civic-dev](https://github.com/civic-interconnect/civic-dev)**
