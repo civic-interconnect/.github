@@ -87,7 +87,9 @@ civic-interconnect/
 ├── civic-lib-geo/
 ├── civic-lib-ocd/
 ├── civic-lib-snapshots/
-└── civic-lib-ui/
+├── civic-lib-ui/
+├── civic-transparency-types/
+└── civic-transparency-spec/
 ```
 
 ---
