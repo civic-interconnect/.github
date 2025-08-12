@@ -17,6 +17,20 @@
 
 > Connecting civic data from public sources to support transparency, interoperability, and civic insights.
 
+## Civic Transparency
+
+- **[civic-transparency-simbots](https://github.com/civic-interconnect/civic-transparency-simbots)**
+- **[civic-transparency-spec](https://github.com/civic-interconnect/civic-transparency-spec)**
+- **[civic-transparency-types](https://github.com/civic-interconnect/civic-transparency-types)**
+- **[civic-transparency-world-45dc9f7a](https://github.com/civic-interconnect/civic-transparency-world-45dc9f7a)**
+- **[civic-transparency-world-7f3a9c2e](https://github.com/civic-interconnect/civic-transparency-world-7f3a9c2e)**
+- **[civic-transparency-world-5c01ee77](https://github.com/civic-interconnect/civic-transparency-world-5c01ee77)**
+- **[civic-transparency-world-2b9f44aa](https://github.com/civic-interconnect/civic-transparency-world-2b9f44aa)**
+- **[civic-transparency-world-8d2a11f0](https://github.com/civic-interconnect/civic-transparency-world-8d2a11f0)**
+- **[civic-transparency-world-34e7c9d1](https://github.com/civic-interconnect/civic-transparency-world-34e7c9d1)**
+
+--- 
+
 ## Live Web Apps Running on GitHub Pages
 
 | App               | Web App                                        |  Source Repo |
@@ -28,19 +42,6 @@
 | Common Ground    | https://civic-interconnect.github.io/civic-common-ground/ |  [civic-common-ground](https://github.com/civic-interconnect/civic-common-ground) |
 
 Under construction: data and features are prototypes. All work is still in progress.
-
-## Civic Transparency
-
-- **[civic-transparency-spec](https://github.com/civic-interconnect/civic-transparency-simbots)**
-- **[civic-transparency-spec](https://github.com/civic-interconnect/civic-transparency-spec)**
-- **[civic-transparency-types](https://github.com/civic-interconnect/civic-transparency-types)**
-
-- **[civic-transparency-world-45dc9f7a](https://github.com/civic-interconnect/civic-transparency-world-45dc9f7a)**
-- **[civic-transparency-world-7f3a9c2e](https://github.com/civic-interconnect/civic-transparency-world-7f3a9c2e)**
-- **[civic-transparency-world-5c01ee77](https://github.com/civic-interconnect/civic-transparency-world-5c01ee77)**
-- **[civic-transparency-world-2b9f44aa](https://github.com/civic-interconnect/civic-transparency-world-2b9f44aa)**
-- **[civic-transparency-world-8d2a11f0](https://github.com/civic-interconnect/civic-transparency-world-8d2a11f0)**
-- **[civic-transparency-world-34e7c9d1](https://github.com/civic-interconnect/civic-transparency-world-34e7c9d1)**
 
 ## New CLI Tool
 
