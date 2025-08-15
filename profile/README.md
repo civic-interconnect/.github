@@ -19,7 +19,6 @@
 
 ## Civic Transparency
 
-- **[civic-transparency-simbots](https://github.com/civic-interconnect/civic-transparency-simbots)**
 - **[civic-transparency-spec](https://github.com/civic-interconnect/civic-transparency-spec)**
 - **[civic-transparency-types](https://github.com/civic-interconnect/civic-transparency-types)**
 - **[civic-transparency-world-45dc9f7a](https://github.com/civic-interconnect/civic-transparency-world-45dc9f7a)**
