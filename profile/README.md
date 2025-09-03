@@ -17,6 +17,10 @@
 
 > Connecting civic data from public sources to support transparency, interoperability, and civic insights.
 
+## Awesome Citizen Science
+
+- [Awesome Citizen Science](https://github.com/civic-interconnect/awesome-citizen-science)
+
 ## Civic Transparency
 
 - **[civic-transparency-spec](https://github.com/civic-interconnect/civic-transparency-spec)**
