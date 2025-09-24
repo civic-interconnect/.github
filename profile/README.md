@@ -27,12 +27,6 @@
 - **[civic-transparency-types](https://github.com/civic-interconnect/civic-transparency-types)**
 - **[civic-transparency-cwe-types](https://github.com/civic-interconnect/civic-transparency-cwe-types)**
 - **[civic-transparency-sdk](https://github.com/civic-interconnect/civic-transparency-sdk)**
-- **[civic-transparency-world-45dc9f7a](https://github.com/civic-interconnect/civic-transparency-world-45dc9f7a)**
-- **[civic-transparency-world-7f3a9c2e](https://github.com/civic-interconnect/civic-transparency-world-7f3a9c2e)**
-- **[civic-transparency-world-5c01ee77](https://github.com/civic-interconnect/civic-transparency-world-5c01ee77)**
-- **[civic-transparency-world-2b9f44aa](https://github.com/civic-interconnect/civic-transparency-world-2b9f44aa)**
-- **[civic-transparency-world-8d2a11f0](https://github.com/civic-interconnect/civic-transparency-world-8d2a11f0)**
-- **[civic-transparency-world-34e7c9d1](https://github.com/civic-interconnect/civic-transparency-world-34e7c9d1)**
 
 --- 
 
