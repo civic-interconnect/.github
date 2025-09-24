@@ -25,6 +25,7 @@
 
 - **[civic-transparency-spec](https://github.com/civic-interconnect/civic-transparency-spec)**
 - **[civic-transparency-types](https://github.com/civic-interconnect/civic-transparency-types)**
+- **[civic-transparency-cwe-types](https://github.com/civic-interconnect/civic-transparency-cwe-types)**
 - **[civic-transparency-sdk](https://github.com/civic-interconnect/civic-transparency-sdk)**
 - **[civic-transparency-world-45dc9f7a](https://github.com/civic-interconnect/civic-transparency-world-45dc9f7a)**
 - **[civic-transparency-world-7f3a9c2e](https://github.com/civic-interconnect/civic-transparency-world-7f3a9c2e)**
