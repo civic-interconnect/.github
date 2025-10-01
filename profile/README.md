@@ -23,7 +23,7 @@
 
 ## Civic Transparency
 
-- **[civic-transparency-spec](https://github.com/civic-interconnect/civic-transparency-spec)**
+- **[civic-transparency-ptag-spec](https://github.com/civic-interconnect/civic-transparency-ptag-spec)**
 - **[civic-transparency-types](https://github.com/civic-interconnect/civic-transparency-types)**
 - **[civic-transparency-cwe-types](https://github.com/civic-interconnect/civic-transparency-cwe-types)**
 - **[civic-transparency-sdk](https://github.com/civic-interconnect/civic-transparency-sdk)**
@@ -102,7 +102,7 @@ civic-interconnect/
 ├── civic-lib-snapshots/
 ├── civic-lib-ui/
 ├── civic-transparency-types/
-└── civic-transparency-spec/
+└── civic-transparency-ptag-spec/
 ```
 
 ---
