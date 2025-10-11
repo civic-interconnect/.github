@@ -27,7 +27,7 @@
 - **[civic-transparency-py-ptag-types](https://github.com/civic-interconnect/civic-transparency-py-ptag-types)**
 - **[civic-transparency-py-cwe-types](https://github.com/civic-interconnect/civic-transparency-py-cwe-types)**
 - **[civic-transparency-py-cwe-catalog](https://github.com/civic-interconnect/civic-transparency-py-cwe-catalog)** - private
-- **[civic-transparency-sdk](https://github.com/civic-interconnect/civic-transparency-sdk)**
+- **[civic-transparency-py-sdk](https://github.com/civic-interconnect/civic-transparency-py-sdk)**
 
 --- 
 
