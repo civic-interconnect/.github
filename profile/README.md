@@ -1,19 +1,8 @@
- # Civic Interconnect
+# Civic Interconnect
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![Project Status: In Progress](https://img.shields.io/badge/status-in--progress-yellow)](https://github.com/civic-interconnect)
 [![Civic-Dev CLI](https://github.com/civic-interconnect/civic-dev/actions/workflows/build.yml/badge.svg)](https://github.com/civic-interconnect/civic-dev/actions/workflows/build.yml)
-
-[![Schema Agent](https://github.com/civic-interconnect/agents-monitor-schema/actions/workflows/agent-runner.yml/badge.svg)](https://github.com/civic-interconnect/agents-monitor-schema/actions/workflows/agent-runner.yml)
-[![Mapping Agent](https://github.com/civic-interconnect/agents-monitor-mapping/actions/workflows/agent-runner.yml/badge.svg)](https://github.com/civic-interconnect/agents-monitor-mapping/actions/workflows/agent-runner.yml)
-[![Bills Agent](https://github.com/civic-interconnect/agents-monitor-bills/actions/workflows/agent-runner.yml/badge.svg)](https://github.com/civic-interconnect/agents-monitor-bills/actions/workflows/agent-runner.yml)
-[![People Agent](https://github.com/civic-interconnect/agents-monitor-people/actions/workflows/agent-runner.yml/badge.svg)](https://github.com/civic-interconnect/agents-monitor-people/actions/workflows/agent-runner.yml)
-
-[![Lib Core](https://github.com/civic-interconnect/civic-lib-core/actions/workflows/lib.yml/badge.svg)](https://github.com/civic-interconnect/civic-lib-core/actions/workflows/lib.yml)
-[![Lib Geo](https://github.com/civic-interconnect/civic-lib-geo/actions/workflows/lib.yml/badge.svg)](https://github.com/civic-interconnect/civic-lib-geo/actions/workflows/lib.yml)
-
-[![Data Boundaries](https://github.com/civic-interconnect/civic-data-boundaries-us/actions/workflows/tests.yml/badge.svg)](https://github.com/civic-interconnect/civic-data-boundaries-us/actions/workflows/tests.yml)
-
 
 > Connecting civic data from public sources to support transparency, interoperability, and civic insights.
 
@@ -21,89 +10,61 @@
 
 - [Awesome Citizen Science](https://github.com/civic-interconnect/awesome-citizen-science)
 
-## Civic Transparency
-
-- **[civic-transparency-ptag-spec](https://github.com/civic-interconnect/civic-transparency-ptag-spec)**
-- **[civic-transparency-py-ptag-types](https://github.com/civic-interconnect/civic-transparency-py-ptag-types)**
-- **[civic-transparency-py-cwe-types](https://github.com/civic-interconnect/civic-transparency-py-cwe-types)**
-- **[civic-transparency-py-cwe-catalog](https://github.com/civic-interconnect/civic-transparency-py-cwe-catalog)** - private
-- **[civic-transparency-py-sdk](https://github.com/civic-interconnect/civic-transparency-py-sdk)**
-
 --- 
 
-## Live Web Apps Running on GitHub Pages
+## Agents
 
-| App               | Web App                                        |  Source Repo |
-|-------------------|---------------------------------------------------|--------------|
-| GeoExplorer       | https://civic-interconnect.github.io/geo-explorer/ | [geo-explorer](https://github.com/civic-interconnect/geo-explorer) |
-| Agent Dashboard   | https://civic-interconnect.github.io/app-agents/  | [app-agents](https://github.com/civic-interconnect/app-agents) |
-| Reps App          | https://civic-interconnect.github.io/app-reps/    | [app-reps](https://github.com/civic-interconnect/app-reps) |
-| Knowledge Graph | https://civic-interconnect.github.io/civic-kg/ |  [civic-kg](https://github.com/civic-interconnect/civic-kg) |
-| Common Ground    | https://civic-interconnect.github.io/civic-common-ground/ |  [civic-common-ground](https://github.com/civic-interconnect/civic-common-ground) |
-
-Under construction: data and features are prototypes. All work is still in progress.
-
-## New CLI Tool
-
-- **[civic-dev](https://github.com/civic-interconnect/civic-dev)**
-  Command Line tool to facilitate Civic Interconnect projects.
-
----
-
-## Monitoring Agents
-
-| Repo | Description | CI  | UV |
+| Repo | Description | CI | Build Tool |
 |---|---|---|---|
-| [agents-monitor-schema](https://github.com/civic-interconnect/agents-monitor-schema) | Track changes to OCD/OpenStates schemas | ![CI](https://github.com/civic-interconnect/agents-monitor-schema/actions/workflows/agent-runner.yml/badge.svg) |   ![UV](https://img.shields.io/badge/uv-yes-success) |
-| [agents-monitor-mapping](https://github.com/civic-interconnect/agents-monitor-mapping) | Extract jurisdiction mappings (OCD / OpenStates) | ![CI](https://github.com/civic-interconnect/agents-monitor-mapping/actions/workflows/agent-runner.yml/badge.svg) |  ![UV](https://img.shields.io/badge/uv-yes-success) |
-| [agents-monitor-bills](https://github.com/civic-interconnect/agents-monitor-bills) | Track daily bill activity using OpenStates | ![CI](https://github.com/civic-interconnect/agents-monitor-bills/actions/workflows/agent-runner.yml/badge.svg) |   ![UV](https://img.shields.io/badge/uv-yes-success) |
-| [agents-monitor-people](https://github.com/civic-interconnect/agents-monitor-people) | Track elected official changes | ![CI](https://github.com/civic-interconnect/agents-monitor-people/actions/workflows/agent-runner.yml/badge.svg) |   ![UV](https://img.shields.io/badge/uv-yes-success) |
+| [agents-monitor-schema](https://github.com/civic-interconnect/agents-monitor-schema) | Track changes to OCD/OpenStates schemas | ![CI](https://github.com/civic-interconnect/agents-monitor-schema/actions/workflows/agent-runner.yml/badge.svg) | ![UV](https://img.shields.io/badge/uv-yes-success) |
+| [agents-monitor-mapping](https://github.com/civic-interconnect/agents-monitor-mapping) | Extract jurisdiction mappings (OCD / OpenStates) | ![CI](https://github.com/civic-interconnect/agents-monitor-mapping/actions/workflows/agent-runner.yml/badge.svg) | ![UV](https://img.shields.io/badge/uv-yes-success) |
+| [agents-monitor-bills](https://github.com/civic-interconnect/agents-monitor-bills) | Track daily bill activity using OpenStates | ![CI](https://github.com/civic-interconnect/agents-monitor-bills/actions/workflows/agent-runner.yml/badge.svg) | ![UV](https://img.shields.io/badge/uv-yes-success) |
+| [agents-monitor-people](https://github.com/civic-interconnect/agents-monitor-people) | Track elected official changes | ![CI](https://github.com/civic-interconnect/agents-monitor-people/actions/workflows/agent-runner.yml/badge.svg) | ![UV](https://img.shields.io/badge/uv-yes-success) |
+
 
 ---
 
-## Hosted Data Sources
+## Apps
 
-- **[civic-data-boundaries-us](https://github.com/civic-interconnect/civic-data-boundaries-us)**
-  Core geographic data for U.S. states and counties.
+| Web App           | Source Repo                                       |  Docs |
+|-------------------|---------------------------------------------------|---------|
+| [GeoExplorer](https://civic-interconnect.github.io/geo-explorer/) | [geo-explorer](https://github.com/civic-interconnect/geo-explorer) | ![Site](https://img.shields.io/website?url=https%3A%2F%2Fcivic-interconnect.github.io%2Fgeo-explorer%2F) |
+| [Agent Dashboard](https://civic-interconnect.github.io/app-agents/) | [app-agents](https://github.com/civic-interconnect/app-agents) | ![Site](https://img.shields.io/website?url=https%3A%2F%2Fcivic-interconnect.github.io%2Fapp-agents%2F) |
+| [Reps App](https://civic-interconnect.github.io/app-reps/) | [app-reps](https://github.com/civic-interconnect/app-reps) | ![Site](https://img.shields.io/website?url=https%3A%2F%2Fcivic-interconnect.github.io%2Fapp-reps%2F) |
+| [Knowledge Graph](https://civic-interconnect.github.io/civic-kg/) | [civic-kg](https://github.com/civic-interconnect/civic-kg) | ![Site](https://img.shields.io/website?url=https%3A%2F%2Fcivic-interconnect.github.io%2Fcivic-kg%2F) |
+| [Common Ground](https://civic-interconnect.github.io/civic-common-ground/) | [civic-common-ground](https://github.com/civic-interconnect/civic-common-ground) | ![Site](https://img.shields.io/website?url=https%3A%2F%2Fcivic-interconnect.github.io%2Fcivic-common-ground%2F) |
 
-- **[civic-data-boundaries-us-cd118](https://github.com/civic-interconnect/civic-data-boundaries-us-cd118)**
-  Core geographic data for U.S. 118th Congressional Districts.
+---
 
-- **[civic-data-boundaries-us-forests](https://github.com/civic-interconnect/civic-data-boundaries-us-forests)**
-  Core geographic data for U.S. National Forests.
+## Datasets
 
-## Shared Libraries
+| Repo | Description | Tests | Docs |
+|---|---|---|---|
+| [civic-data-boundaries-us](https://github.com/civic-interconnect/civic-data-boundaries-us) | U.S. core geo boundaries (states, counties) | ![CI](https://github.com/civic-interconnect/civic-data-boundaries-us/actions/workflows/tests.yml/badge.svg) | ![Site](https://img.shields.io/website?url=https%3A%2F%2Fcivic-interconnect.github.io%2Fcivic-data-boundaries-us%2F) |
+| [civic-data-boundaries-us-cd118](https://github.com/civic-interconnect/civic-data-boundaries-us-cd118) | U.S. 118th congressional districts | ![CI](https://github.com/civic-interconnect/civic-data-boundaries-us-cd118/actions/workflows/tests.yml/badge.svg) | ![Site](https://img.shields.io/website?url=https%3A%2F%2Fcivic-interconnect.github.io%2Fcivic-data-boundaries-us-cd118%2F) |
+| [civic-data-boundaries-us-forests](https://github.com/civic-interconnect/civic-data-boundaries-us-forests) | U.S. National Forests | ![CI](https://github.com/civic-interconnect/civic-data-boundaries-us-forests/actions/workflows/tests.yml/badge.svg) | ![Site](https://img.shields.io/website?url=https%3A%2F%2Fcivic-interconnect.github.io%2Fcivic-data-boundaries-us-forests%2F) |
 
-- **[civic-lib-core](https://github.com/civic-interconnect/civic-lib-core)**
-  Core library for logging, error handling, and API utilities.
+---
 
-- **[civic-lib-geo](https://github.com/civic-interconnect/civic-lib-geo)**
-  Shared geospatial utilities for boundary and mapping operations.
+## Dev, Libraries
 
-## Project Organization
+| Repo | Description | CI | Docs | Build Tool |
+|------|-------------|----|------|----|
+| [civic-dev](https://github.com/civic-interconnect/civic-dev) | CLI tool (Zig) | ![CI](https://github.com/civic-interconnect/civic-dev/actions/workflows/build.yml/badge.svg) | ![Site](https://img.shields.io/website?url=https%3A%2F%2Fcivic-interconnect.github.io%2Fcivic-dev%2F) | ![Zig](https://img.shields.io/badge/zig-build-blue) |
+| [civic-lib-core](https://github.com/civic-interconnect/civic-lib-core) | Shared utility library (logging, errors, API) | ![CI](https://github.com/civic-interconnect/civic-lib-core/actions/workflows/lib.yml/badge.svg) | ![Site](https://img.shields.io/website?url=https%3A%2F%2Fcivic-interconnect.github.io%2Fcivic-lib-core%2F) | ![UV](https://img.shields.io/badge/uv-yes-success) |
+| [civic-lib-geo](https://github.com/civic-interconnect/civic-lib-geo) | Geospatial utilities | ![CI](https://github.com/civic-interconnect/civic-lib-geo/actions/workflows/lib.yml/badge.svg) | ![Site](https://img.shields.io/website?url=https%3A%2F%2Fcivic-interconnect.github.io%2Fcivic-lib-geo%2F) | ![UV](https://img.shields.io/badge/uv-yes-success) |
 
-```text
-civic-interconnect/
-├── geo-explorer/
-├── app-agents/
-├── app-core/
-├── app-reps/
-├── agents-monitor-bills/
-├── agents-monitor-schema/
-├── agents-monitor-people/
-├── agents-monitor-mapping/
-├── civic-data-boundaries-us/
-├── civic-data-boundaries-us-cd118/
-├── civic-data-boundaries-us-forests/
-├── civic-dev/
-├── civic-lib-core/
-├── civic-lib-geo/
-├── civic-lib-ocd/
-├── civic-lib-snapshots/
-├── civic-lib-ui/
-├── civic-transparency-types/
-└── civic-transparency-ptag-spec/
-```
+---
+
+## Transparency
+
+| Repo | Description | CI | Docs | PyPI | Python |
+|---|---|---|---|---|---|
+| [civic-transparency-ptag-spec](https://github.com/civic-interconnect/civic-transparency-ptag-spec) | Core provenance and transparency specification | ![CI](https://github.com/civic-interconnect/civic-transparency-ptag-spec/actions/workflows/ci.yml/badge.svg) | ![Site](https://img.shields.io/website?url=https%3A%2F%2Fcivic-interconnect.github.io%2Fcivic-transparency-ptag-spec%2F) | *N/A* | *N/A* |
+| [civic-transparency-py-ptag-types](https://github.com/civic-interconnect/civic-transparency-py-ptag-types) | Python types for PTag spec | ![CI](https://github.com/civic-interconnect/civic-transparency-py-ptag-types/actions/workflows/ci.yml/badge.svg) | ![Site](https://img.shields.io/website?url=https%3A%2F%2Fcivic-interconnect.github.io%2Fcivic-transparency-py-ptag-types%2F) | [![PyPI](https://img.shields.io/pypi/v/civic-transparency-ptag-types.svg)](https://pypi.org/project/civic-transparency-ptag-types/) | ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/civic-transparency-ptag-types.svg) |
+| [civic-transparency-py-cwe-types](https://github.com/civic-interconnect/civic-transparency-py-cwe-types) | CWE catalog type definitions | ![CI](https://github.com/civic-interconnect/civic-transparency-py-cwe-types/actions/workflows/ci.yml/badge.svg) | ![Site](https://img.shields.io/website?url=https%3A%2F%2Fcivic-interconnect.github.io%2Fcivic-transparency-py-cwe-types%2F) | [![PyPI](https://img.shields.io/pypi/v/civic-transparency-cwe-types.svg)](https://pypi.org/project/civic-transparency-cwe-types/) | ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/civic-transparency-cwe-types.svg) |
+| [civic-transparency-py-sdk](https://github.com/civic-interconnect/civic-transparency-py-sdk) | SDK for transparency simulation and tooling | ![CI](https://github.com/civic-interconnect/civic-transparency-py-sdk/actions/workflows/ci.yml/badge.svg) | ![Site](https://img.shields.io/website?url=https%3A%2F%2Fcivic-interconnect.github.io%2Fcivic-transparency-py-sdk%2F) | [![PyPI](https://img.shields.io/pypi/v/civic-transparency-sdk.svg)](https://pypi.org/project/civic-transparency-sdk/) | ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/civic-transparency-sdk.svg) |
+| [civic-transparency-py-cwe-catalog](https://github.com/civic-interconnect/civic-transparency-py-cwe-catalog) | CWE catalog data and utilities (private) | *private* | *private* | *private* | *private* |
 
 ---
 
