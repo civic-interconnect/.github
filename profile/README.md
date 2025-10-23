@@ -48,19 +48,18 @@ Under construction: data and features are prototypes. All work is still in progr
 - **[civic-dev](https://github.com/civic-interconnect/civic-dev)**
   Command Line tool to facilitate Civic Interconnect projects.
 
+---
+
 ## Monitoring Agents
 
-- **[agents-monitor-schema](https://github.com/civic-interconnect/agents-monitor-schema)**
-  Monitor Open Civic Data (OCD) and OpenStates schemas for structural changes.
+| Repo | Description | CI  | UV |
+|---|---|---|---|
+| [agents-monitor-schema](https://github.com/civic-interconnect/agents-monitor-schema) | Track changes to OCD/OpenStates schemas | ![CI](https://github.com/civic-interconnect/agents-monitor-schema/actions/workflows/agent-runner.yml/badge.svg) |   ![UV](https://img.shields.io/badge/uv-yes-success) |
+| [agents-monitor-mapping](https://github.com/civic-interconnect/agents-monitor-mapping) | Extract jurisdiction mappings (OCD / OpenStates) | ![CI](https://github.com/civic-interconnect/agents-monitor-mapping/actions/workflows/agent-runner.yml/badge.svg) |  ![UV](https://img.shields.io/badge/uv-yes-success) |
+| [agents-monitor-bills](https://github.com/civic-interconnect/agents-monitor-bills) | Track daily bill activity using OpenStates | ![CI](https://github.com/civic-interconnect/agents-monitor-bills/actions/workflows/agent-runner.yml/badge.svg) |   ![UV](https://img.shields.io/badge/uv-yes-success) |
+| [agents-monitor-people](https://github.com/civic-interconnect/agents-monitor-people) | Track elected official changes | ![CI](https://github.com/civic-interconnect/agents-monitor-people/actions/workflows/agent-runner.yml/badge.svg) |   ![UV](https://img.shields.io/badge/uv-yes-success) |
 
-- **[agents-monitor-mapping](https://github.com/civic-interconnect/agents-monitor-mapping)**
-  Extract and report on jurisdiction mappings from OCD to OpenStates.
-
-- **[agents-monitor-bills](https://github.com/civic-interconnect/agents-monitor-bills)**
-  Track daily bill activity by jurisdiction using OpenStates GraphQL.
-
-- **[agents-monitor-people](https://github.com/civic-interconnect/agents-monitor-people)**
-  Track elected official changes and affiliations.
+---
 
 ## Hosted Data Sources
 
