@@ -51,8 +51,8 @@
 | Repo | Description | CI | Docs | Build Tool |
 |------|-------------|----|------|----|
 | [civic-dev](https://github.com/civic-interconnect/civic-dev) | CLI tool (Zig) | ![CI](https://github.com/civic-interconnect/civic-dev/actions/workflows/build.yml/badge.svg) | ![Site](https://img.shields.io/website?url=https%3A%2F%2Fcivic-interconnect.github.io%2Fcivic-dev%2F) | ![Zig](https://img.shields.io/badge/zig-build-blue) |
-| [civic-lib-core](https://github.com/civic-interconnect/civic-lib-core) | Shared utility library (logging, errors, API) | ![CI](https://github.com/civic-interconnect/civic-lib-core/actions/workflows/lib.yml/badge.svg) | ![Site](https://img.shields.io/website?url=https%3A%2F%2Fcivic-interconnect.github.io%2Fcivic-lib-core%2F) | ![UV](https://img.shields.io/badge/uv-yes-success) |
-| [civic-lib-geo](https://github.com/civic-interconnect/civic-lib-geo) | Geospatial utilities | ![CI](https://github.com/civic-interconnect/civic-lib-geo/actions/workflows/lib.yml/badge.svg) | ![Site](https://img.shields.io/website?url=https%3A%2F%2Fcivic-interconnect.github.io%2Fcivic-lib-geo%2F) | ![UV](https://img.shields.io/badge/uv-yes-success) |
+| [civic-lib-core](https://github.com/civic-interconnect/civic-lib-core) | Shared utility library (logging, errors, API) | ![CI](https://github.com/civic-interconnect/civic-lib-core/actions/workflows/ci.yml/badge.svg) | ![Site](https://img.shields.io/website?url=https%3A%2F%2Fcivic-interconnect.github.io%2Fcivic-lib-core%2F) | ![UV](https://img.shields.io/badge/uv-yes-success) |
+| [civic-lib-geo](https://github.com/civic-interconnect/civic-lib-geo) | Geospatial utilities | ![CI](https://github.com/civic-interconnect/civic-lib-geo/actions/workflows/ci.yml/badge.svg) | ![Site](https://img.shields.io/website?url=https%3A%2F%2Fcivic-interconnect.github.io%2Fcivic-lib-geo%2F) | ![UV](https://img.shields.io/badge/uv-yes-success) |
 
 ---
 
