@@ -42,7 +42,7 @@
 | Repo | Description | Tests | Docs |
 |---|---|---|---|
 | [civic-data-boundaries-us](https://github.com/civic-interconnect/civic-data-boundaries-us) | U.S. core geo boundaries (states, counties) | ![CI](https://github.com/civic-interconnect/civic-data-boundaries-us/actions/workflows/tests.yml/badge.svg) | ![Site](https://img.shields.io/website?url=https%3A%2F%2Fcivic-interconnect.github.io%2Fcivic-data-boundaries-us%2F) |
-| [civic-data-boundaries-us-cd118](https://github.com/civic-interconnect/civic-data-boundaries-us-cd118) | U.S. 118th congressional districts | ![CI](https://github.com/civic-interconnect/civic-data-boundaries-us-cd118/actions/workflows/tests.yml/badge.svg) | ![Site](https://img.shields.io/website?url=https%3A%2F%2Fcivic-interconnect.github.io%2Fcivic-data-boundaries-us-cd118%2F) |
+| [civic-data-boundaries-us-cd118](https://github.com/civic-interconnect/civic-data-boundaries-us-cd118) | U.S. 118th congressional districts| [![CI](https://github.com/civic-interconnect/civic-data-boundaries-us-cd118/actions/workflows/ci.yml/badge.svg)](https://github.com/civic-interconnect/civic-data-boundaries-us-cd118/actions/workflows/ci.yml) | [![Site](https://img.shields.io/website?url=https%3A%2F%2Fcivic-interconnect.github.io%2Fcivic-data-boundaries-us-cd118%2Flatest%2F)](https://civic-interconnect.github.io/civic-data-boundaries-us-cd118/latest/) |
 | [civic-data-boundaries-us-forests](https://github.com/civic-interconnect/civic-data-boundaries-us-forests) | U.S. National Forests | ![CI](https://github.com/civic-interconnect/civic-data-boundaries-us-forests/actions/workflows/tests.yml/badge.svg) | ![Site](https://img.shields.io/website?url=https%3A%2F%2Fcivic-interconnect.github.io%2Fcivic-data-boundaries-us-forests%2F) |
 
 ---
