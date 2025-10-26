@@ -14,12 +14,13 @@
 
 ## Agents
 
-| Repo | Description | CI | Build Tool |
-|---|---|---|---|
-| [agents-monitor-schema](https://github.com/civic-interconnect/agents-monitor-schema) | Track changes to OCD/OpenStates schemas | ![CI](https://github.com/civic-interconnect/agents-monitor-schema/actions/workflows/agent-runner.yml/badge.svg) | ![UV](https://img.shields.io/badge/uv-yes-success) |
-| [agents-monitor-mapping](https://github.com/civic-interconnect/agents-monitor-mapping) | Extract jurisdiction mappings (OCD / OpenStates) | ![CI](https://github.com/civic-interconnect/agents-monitor-mapping/actions/workflows/agent-runner.yml/badge.svg) | ![UV](https://img.shields.io/badge/uv-yes-success) |
-| [agents-monitor-bills](https://github.com/civic-interconnect/agents-monitor-bills) | Track daily bill activity using OpenStates | ![CI](https://github.com/civic-interconnect/agents-monitor-bills/actions/workflows/agent-runner.yml/badge.svg) | ![UV](https://img.shields.io/badge/uv-yes-success) |
-| [agents-monitor-people](https://github.com/civic-interconnect/agents-monitor-people) | Track elected official changes | ![CI](https://github.com/civic-interconnect/agents-monitor-people/actions/workflows/agent-runner.yml/badge.svg) | ![UV](https://img.shields.io/badge/uv-yes-success) |
+| Repo | Description | CI | Tool |
+|-------|------------|----|------------|
+| [agents-monitor-schema](https://github.com/civic-interconnect/agents-monitor-schema) | Track changes to OCD/OpenStates schemas | [![CI](https://github.com/civic-interconnect/agents-monitor-schema/actions/workflows/agent-runner.yml/badge.svg)](https://github.com/civic-interconnect/agents-monitor-schema/actions/workflows/agent-runner.yml) | ![UV](https://img.shields.io/badge/uv-yes-success) |
+| [agents-monitor-mapping](https://github.com/civic-interconnect/agents-monitor-mapping) | Extract jurisdiction mappings (OCD / OpenStates) | [![CI](https://github.com/civic-interconnect/agents-monitor-mapping/actions/workflows/agent-runner.yml/badge.svg)](https://github.com/civic-interconnect/agents-monitor-mapping/actions/workflows/agent-runner.yml) | ![UV](https://img.shields.io/badge/uv-yes-success) |
+| [agents-monitor-bills](https://github.com/civic-interconnect/agents-monitor-bills) | Track daily bill activity using OpenStates | [![CI](https://github.com/civic-interconnect/agents-monitor-bills/actions/workflows/agent-runner.yml/badge.svg)](https://github.com/civic-interconnect/agents-monitor-bills/actions/workflows/agent-runner.yml) | ![UV](https://img.shields.io/badge/uv-yes-success) |
+| [agents-monitor-people](https://github.com/civic-interconnect/agents-monitor-people) | Track elected official changes | [![CI](https://github.com/civic-interconnect/agents-monitor-people/actions/workflows/agent-runner.yml/badge.svg)](https://github.com/civic-interconnect/agents-monitor-people/actions/workflows/agent-runner.yml) | ![UV](https://img.shields.io/badge/uv-yes-success) |
+
 
 
 ---
@@ -48,8 +49,8 @@
 
 ## Development Tools and Libraries
 
-| Repo | Description | CI | Docs | Build Tool | PyPI | Python |
-|------|-------------|----|------|------------|------|---------|
+| Repo | Description | CI | Docs | Tool | PyPI | Python |
+|------|-------------|----|------|------|------|---------|
 | [civic-dev](https://github.com/civic-interconnect/civic-dev) | CLI tool (Zig) | [![CI](https://github.com/civic-interconnect/civic-dev/actions/workflows/build.yml/badge.svg)](https://github.com/civic-interconnect/civic-dev/actions/workflows/build.yml) | [![Site](https://img.shields.io/website?url=https%3A%2F%2Fcivic-interconnect.github.io%2Fcivic-dev%2F)](https://civic-interconnect.github.io/civic-dev/) | ![Zig](https://img.shields.io/badge/zig-build-blue) |  *N/A*|  *N/A* |
 | [civic-lib-core](https://github.com/civic-interconnect/civic-lib-core) | Shared utility library (logging, errors, API) | [![CI](https://github.com/civic-interconnect/civic-lib-core/actions/workflows/ci.yml/badge.svg)](https://github.com/civic-interconnect/civic-lib-core/actions/workflows/ci.yml) | [![Site](https://img.shields.io/website?url=https%3A%2F%2Fcivic-interconnect.github.io%2Fcivic-lib-core%2Flatest%2F)](https://civic-interconnect.github.io/civic-lib-core/latest/) | ![UV](https://img.shields.io/badge/uv-yes-success) | [![PyPI](https://img.shields.io/pypi/v/civic-lib-core.svg)](https://pypi.org/project/civic-lib-core/) | ![Python](https://img.shields.io/pypi/pyversions/civic-lib-core.svg) |
 | [civic-lib-geo](https://github.com/civic-interconnect/civic-lib-geo) | Geospatial utilities | [![CI](https://github.com/civic-interconnect/civic-lib-geo/actions/workflows/ci.yml/badge.svg)](https://github.com/civic-interconnect/civic-lib-geo/actions/workflows/ci.yml) | [![Site](https://img.shields.io/website?url=https%3A%2F%2Fcivic-interconnect.github.io%2Fcivic-lib-geo%2Flatest%2F)](https://civic-interconnect.github.io/civic-lib-geo/latest/) | ![UV](https://img.shields.io/badge/uv-yes-success) | [![PyPI](https://img.shields.io/pypi/v/civic-lib-geo.svg)](https://pypi.org/project/civic-lib-geo/) | ![Python](https://img.shields.io/pypi/pyversions/civic-lib-geo.svg) |
