@@ -6,9 +6,10 @@
 
 > Connecting civic data from public sources to support transparency, interoperability, and civic insights.
 
-## Awesome Citizen Science
+## Participate
 
 - [Awesome Citizen Science](https://github.com/civic-interconnect/awesome-citizen-science)
+- [Civic Participation Resources](https://github.com/civic-interconnect/civic-participation-resources)
 
 --- 
 
