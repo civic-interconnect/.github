@@ -7,7 +7,6 @@ name: Validate PTag (civic-data reusable)
 # - Coverage: Generate coverage / testing reports
 # - Deploy: Build package and docs (sanity checks for release readiness)
 
-
 on:
   workflow_call:
 
@@ -34,11 +33,28 @@ jobs:
       - name: B1) Validate provenance/ptag.json against civic-data schema
         shell: bash
         run: |
-          if [ ! -f "provenance/ptag.json" ]; then
-            echo "No provenance/ptag.json found. Skipping."
+          PTAG_PATH="provenance/ptag.json"
+          SCHEMA_URL="https://raw.githubusercontent.com/civic-interconnect/civic-ptag-core-schema/main/schema/ptag.civic-data.schema.json"
+          SCHEMA_RAW="ptag.civic-data.schema.raw.json"
+          SCHEMA_PATH="ptag.civic-data.schema.runtime.json"
+
+          if [ ! -f "$PTAG_PATH" ]; then
+            echo "No $PTAG_PATH found. Skipping P-Tag civic-data validation."
             exit 0
           fi
 
-          SCHEMA_URL="https://raw.githubusercontent.com/civic-interconnect/civic-ptag-core-schema/main/schema/ptag.civic-data.schema.json"
-          echo "Using schema: ${SCHEMA_URL}"
-          ajv -s "${SCHEMA_URL}" -d "provenance/ptag.json"
+          echo "Using schema: $SCHEMA_URL"
+          curl -sSL "$SCHEMA_URL" -o "$SCHEMA_RAW"
+
+          echo "Stripping \$schema meta-schema reference from downloaded civic-data schema with jq..."
+          jq 'del(.["$schema"])' "$SCHEMA_RAW" > "$SCHEMA_PATH"
+
+          echo "Schema files in workspace:"
+          ls -l ptag.civic-data.schema*
+
+          echo "Validating $PTAG_PATH against runtime civic-data schema..."
+          npx ajv-cli validate \
+            --spec=draft2020 \
+            -s "$SCHEMA_PATH" \
+            -d "$PTAG_PATH" \
+            --errors=text

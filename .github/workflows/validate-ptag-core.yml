@@ -33,11 +33,28 @@ jobs:
       - name: B1) Validate provenance/ptag.json against core schema
         shell: bash
         run: |
-          if [ ! -f "provenance/ptag.json" ]; then
-            echo "No provenance/ptag.json found. Skipping."
+          PTAG_PATH="provenance/ptag.json"
+          SCHEMA_URL="https://raw.githubusercontent.com/civic-interconnect/civic-ptag-core-schema/main/schema/ptag.core.schema.json"
+          SCHEMA_RAW="ptag.core.schema.raw.json"
+          SCHEMA_PATH="ptag.core.schema.runtime.json"
+
+          if [ ! -f "$PTAG_PATH" ]; then
+            echo "No $PTAG_PATH found. Skipping P-Tag validation."
             exit 0
           fi
 
-          SCHEMA_URL="https://raw.githubusercontent.com/civic-interconnect/civic-ptag-core-schema/main/schema/ptag.core.schema.json"
-          echo "Using schema: ${SCHEMA_URL}"
-          ajv -s "${SCHEMA_URL}" -d "provenance/ptag.json"
+          echo "Using schema: $SCHEMA_URL"
+          curl -sSL "$SCHEMA_URL" -o "$SCHEMA_RAW"
+
+          echo "Stripping \$schema meta-schema reference from downloaded schema with jq..."
+          jq 'del(.["$schema"])' "$SCHEMA_RAW" > "$SCHEMA_PATH"
+
+          echo "Schema files in workspace:"
+          ls -l ptag.core.schema*
+
+          echo "Validating $PTAG_PATH against runtime schema..."
+          npx ajv-cli validate \
+            --spec=draft2020 \
+            -s "$SCHEMA_PATH" \
+            -d "$PTAG_PATH" \
+            --errors=text

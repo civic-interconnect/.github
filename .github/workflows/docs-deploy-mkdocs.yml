@@ -25,6 +25,7 @@ concurrency:
 env:
   PYTHONUNBUFFERED: "1" # real-time logging
   PYTHONIOENCODING: "utf-8"
+  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
   docs:

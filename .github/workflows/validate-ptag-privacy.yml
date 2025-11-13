@@ -14,7 +14,7 @@ permissions:
   contents: read
 
 jobs:
-  validate-ptag-core:
+  validate-ptag-privacy:
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
@@ -33,11 +33,28 @@ jobs:
       - name: B1) Validate provenance/ptag.json against privacy schema
         shell: bash
         run: |
-          if [ ! -f "provenance/ptag.json" ]; then
-            echo "No provenance/ptag.json found. Skipping."
+          PTAG_PATH="provenance/ptag.json"
+          SCHEMA_URL="https://raw.githubusercontent.com/civic-interconnect/civic-ptag-privacy-schema/main/schema/ptag.privacy.schema.json"
+          SCHEMA_RAW="ptag.privacy.schema.raw.json"
+          SCHEMA_PATH="ptag.privacy.schema.runtime.json"
+
+          if [ ! -f "$PTAG_PATH" ]; then
+            echo "No $PTAG_PATH found. Skipping P-Tag privacy validation."
             exit 0
           fi
 
-          SCHEMA_URL="https://raw.githubusercontent.com/civic-interconnect/civic-ptag-privacy-schema/main/schema/ptag.privacy.schema.json"
-          echo "Using schema: ${SCHEMA_URL}"
-          ajv -s "${SCHEMA_URL}" -d "provenance/ptag.json"
+          echo "Using schema: $SCHEMA_URL"
+          curl -sSL "$SCHEMA_URL" -o "$SCHEMA_RAW"
+
+          echo "Stripping \$schema meta-schema reference from downloaded privacy schema with jq..."
+          jq 'del(.["$schema"])' "$SCHEMA_RAW" > "$SCHEMA_PATH"
+
+          echo "Schema files in workspace:"
+          ls -l ptag.privacy.schema*
+
+          echo "Validating $PTAG_PATH against runtime privacy schema..."
+          npx ajv-cli validate \
+            --spec=draft2020 \
+            -s "$SCHEMA_PATH" \
+            -d "$PTAG_PATH" \
+            --errors=text
