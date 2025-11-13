@@ -1,4 +1,4 @@
-# Understanding Schemas, Provenance, and P-Tags  
+# Understanding Schemas, Provenance, and PTags  
 
 >A guide for Civic Interconnect
 
@@ -61,9 +61,9 @@ Relationships between these (.e.g, `wasGeneratedBy`, `used`, `wasAttributedTo`) 
 
 ---
 
-## 3. The role of P-Tags
+## 3. The role of PTags
 
-A **Provenance Tag (P-Tag)** is a lightweight, human-readable **bundle of provenance metadata**.  
+A **Provenance Tag (PTag)** is a lightweight, human-readable **bundle of provenance metadata**.  
 It's like a label for an artifact in a repository:
 
 - **What** it is (dataset, library, app)  
@@ -82,14 +82,14 @@ When every repo in a large ecosystem does this consistently, the tags become:
 
 ---
 
-## 4. Why schemas and P-Tags matter together
+## 4. Why schemas and PTags matter together
 
 Without schemas, provenance tags would just be text someone might fill out somewhat correctly.  
 With a JSON Schema, we can:
 
 - **Enforce structure** across dozens of repos.  
 - **Automate validation** (e.g., a GitHub Action runs `ptag validate provenance/ptag.json`).  
-- **Enable federation** - external tools can index all P-Tags because they know the schema layout.  
+- **Enable federation** - external tools can index all PTags because they know the schema layout.  
 - **Version control** - each schema version documents exactly what fields existed and what they meant at a point in time.
 
 This turns a pile of separate repositories into a **linked, inspectable system** and every dataset, adapter, and app can be traced, rebuilt, and cited.
@@ -99,9 +99,9 @@ This turns a pile of separate repositories into a **linked, inspectable system**
 ## 5. Auditability and reproducibility in open analytics
 
 Open-source analytics should be based on **evidence, not trust**.  
-A schema-based P-Tag system enables:
+A schema-based PTag system enables:
 
-1. Scripts can check all P-Tags for required information.  
+1. Scripts can check all PTags for required information.  
 2. Provenance tells us which versions of tools, configs, and data were used.  
 3. Every dataset or app is anchored to a reproducible lineage.  
 4. Contributor roles are captured systematically.  
@@ -111,7 +111,7 @@ A schema-based P-Tag system enables:
 
 ## 6. In Civic Interconnect
 
-- **Schema Repo (`civic-ptag-core-schema`)** defines the standard P-Tag structure.  
+- **Schema Repo (`civic-ptag-core-schema`)** defines the standard PTag structure.  
 - **Each active repo** includes a validated `provenance/ptag.json`.  
 - **Provenance Tooling (`civic-ptag-tools`)** automates validation and integration.  
 - **Extensions (“profiles”)** add domain-specific fields for elections, health, education, etc.

@@ -1,5 +1,5 @@
-# .github/workflows/validate-ptag-core.yml
-name: Validate PTag (core reusable)
+# .github/workflows/validate-ptag-privacy.yml
+name: Validate PTag (privacy reusable)
 
 # CI PHASES A-B-C-D:
 # - Assemble: Install dependencies, verify environment setup
@@ -30,7 +30,7 @@ jobs:
       - name: A3) Install ajv-cli
         run: npm install -g ajv-cli
 
-      - name: B1) Validate provenance/ptag.json against core schema
+      - name: B1) Validate provenance/ptag.json against privacy schema
         shell: bash
         run: |
           if [ ! -f "provenance/ptag.json" ]; then
@@ -38,6 +38,6 @@ jobs:
             exit 0
           fi
 
-          SCHEMA_URL="https://raw.githubusercontent.com/civic-interconnect/civic-ptag-core-schema/main/schema/ptag.core.schema.json"
+          SCHEMA_URL="https://raw.githubusercontent.com/civic-interconnect/civic-ptag-privacy-schema/main/schema/ptag.privacy.schema.json"
           echo "Using schema: ${SCHEMA_URL}"
           ajv -s "${SCHEMA_URL}" -d "provenance/ptag.json"
