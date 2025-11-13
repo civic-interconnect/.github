@@ -81,7 +81,7 @@ uv run mkdocs serve
 ```
 git add .
 git commit -m "Your message"
-git push
+git push -u origin main
 ```
 
 ## 8. Open a Pull Request
