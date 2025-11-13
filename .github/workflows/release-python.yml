@@ -19,10 +19,6 @@ permissions:
   contents: write # create the GitHub Release
   id-token: write # PyPI Trusted Publishing (OIDC)
 
-concurrency:
-  group: release-${{ github.ref }}
-  cancel-in-progress: true
-
 env:
   PYTHONUNBUFFERED: "1" # real-time logging
   PYTHONIOENCODING: "utf-8"
