@@ -1,0 +1,52 @@
+# .github/workflows/ci-node.yml
+name: CI (Node reusable)
+
+# CI PHASES A-B-C-D:
+# - Assemble: Install dependencies, verify environment setup
+# - Baseline: Core validation (types exist, lint passes, tests pass)
+# - Coverage: Generate coverage / testing reports
+# - Deploy: Build package and docs (sanity checks for release readiness)
+
+on:
+  workflow_call:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: A1) Checkout
+        uses: actions/checkout@v5
+
+      - name: A2) Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: A3) Install dependencies
+        run: npm ci
+
+      - name: C1) Run tests (if defined)
+        run: |
+          if npm run | grep -q " test"; then
+            npm test
+          else
+            echo "No test script defined; skipping npm test."
+          fi
+
+      - name: D1) Build (if defined)
+        run: |
+          if npm run | grep -q " build"; then
+            npm run build
+          else
+            echo "No build script defined; skipping npm run build."
+          fi

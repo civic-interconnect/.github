@@ -1,0 +1,44 @@
+# .github/workflows/validate-ptag-civic-data.yml
+name: Validate P-Tag (civic-data reusable)
+
+# CI PHASES A-B-C-D:
+# - Assemble: Install dependencies, verify environment setup
+# - Baseline: Core validation (types exist, lint passes, tests pass)
+# - Coverage: Generate coverage / testing reports
+# - Deploy: Build package and docs (sanity checks for release readiness)
+
+
+on:
+  workflow_call:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-ptag-civic-data:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: A1) Checkout
+        uses: actions/checkout@v5
+
+      - name: A2) Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: A3) Install ajv-cli
+        run: npm install -g ajv-cli
+
+      - name: B1) Validate provenance/ptag.json against civic-data schema
+        shell: bash
+        run: |
+          if [ ! -f "provenance/ptag.json" ]; then
+            echo "No provenance/ptag.json found. Skipping."
+            exit 0
+          fi
+
+          SCHEMA_URL="https://raw.githubusercontent.com/civic-interconnect/civic-ptag-core-schema/main/schema/ptag.civic-data.schema.json"
+          echo "Using schema: ${SCHEMA_URL}"
+          ajv -s "${SCHEMA_URL}" -d "provenance/ptag.json"
