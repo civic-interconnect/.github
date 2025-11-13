@@ -1,6 +1,7 @@
 # .github/workflows/release-python.yml
-name: Release (Python reusable)
+name: Release (PyPI + versioned docs)
 
+# CANNOT REUSE - COPY THIS TO A PYPI PROJECT AND ADJUST AS NEEDED.
 # Designed to run only on version tags (e.g., vx.y.z).
 # Final step before distribution.
 # It builds distribution files, runs tests, prepares release, and publishes.
@@ -13,7 +14,9 @@ name: Release (Python reusable)
 # - Deploy: Build package and docs (sanity checks for release readiness)
 
 on:
-  workflow_call:
+  push:
+    tags:
+      - "v*.*.*"
 
 permissions:
   contents: write # create the GitHub Release
