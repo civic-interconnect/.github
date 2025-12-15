@@ -9,9 +9,9 @@
 ## Civic Interconnect
 
 - [Civic Interconnect: Theory](https://github.com/civic-interconnect/cep-theory)
-    - [DRAFT 00P1_cae_ontology.pdf](https://github.com/civic-interconnect/cep-theory/blob/main/00P1_cae_ontology.pdf).
-    - [DRAFT 00P2_cep_semantics.pdf](https://github.com/civic-interconnect/cep-theory/blob/main/00P2_cep_semantics.pdf).
-    - [DRAFT 00P3_cee_verticals.pdf](https://github.com/civic-interconnect/cep-theory/blob/main/00P3_cee_verticals.pdf).
+    - [DRAFT 00P1_cae_ontology.pdf](https://github.com/civic-interconnect/cep-theory/blob/main/00P1_cae_ontology.pdf)
+    - [DRAFT 00P2_cep_semantics.pdf](https://github.com/civic-interconnect/cep-theory/blob/main/00P2_cep_semantics.pdf)
+    - [DRAFT 00P3_cee_verticals.pdf](https://github.com/civic-interconnect/cep-theory/blob/main/00P3_cee_verticals.pdf)
 - [Civic Interconnect: Specifications for Accountable Civic Data](https://github.com/civic-interconnect/civic-interconnect)
 
 ## Participate
