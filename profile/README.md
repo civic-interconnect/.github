@@ -6,6 +6,10 @@
 
 > Connecting civic data from public sources to support transparency, interoperability, and civic insights.
 
+## Structural Explainability
+
+- [paper - repo](https://github.com/civic-interconnect/structural-explainability-paper-100-neutral-substrate)
+
 ## Civic Interconnect
 
 - [Civic Interconnect: Theory](https://github.com/civic-interconnect/cep-theory)
