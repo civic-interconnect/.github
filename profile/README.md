@@ -8,7 +8,17 @@
 
 ## Structural Explainability
 
-- [paper - repo](https://github.com/civic-interconnect/structural-explainability-paper-100-neutral-substrate)
+This work develops foundational structural constraints on ontological substrates
+intended to support accountability and interoperability under persistent interpretive disagreement.
+It establishes what must be true of any such substrate prior to concrete ontology design or implementation.
+
+| Repo | Focus | Status | Description |
+|---|---|---|---|
+| [NeutralSubstrate (Lean 4)](https://github.com/civic-interconnect/NeutralSubstrate) | Neutrality constraint | ![CI](https://github.com/civic-interconnect/NeutralSubstrate/actions/workflows/ci.yml/badge.svg) | Proves an impossibility result: substrates stable under incompatible extensions must be pre-causal and pre-normative. |
+| [IdentityRegimes (Lean 4)](https://github.com/civic-interconnect/IdentityRegimes) | Structural necessity | ![CI](https://github.com/civic-interconnect/IdentityRegimes/actions/workflows/ci.yml/badge.svg) | Shows that exactly six identity-and-persistence regimes are necessary and sufficient for accountability-oriented substrates under neutrality and independence assumptions. |
+| [structural-explainability-paper-100-neutral-substrate](https://github.com/civic-interconnect/structural-explainability-paper-100-neutral-substrate) | Paper companion | N/A | Narrative exposition of the neutrality result and its formal proof. |
+| [structural-explainability-paper-200-identity-regimes](https://github.com/civic-interconnect/structural-explainability-paper-200-identity-regimes) | Paper companion | N/A | Narrative exposition of the identity-regimes result and its formal proof. |
+
 
 ## Civic Interconnect
 
