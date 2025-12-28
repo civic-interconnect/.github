@@ -8,22 +8,12 @@
 
 ## Structural Explainability
 
-This work develops foundational structural constraints on ontological substrates
-intended to support accountability and interoperability under persistent interpretive disagreement.
-It establishes what must be true of any such substrate prior to concrete ontology design or implementation.
-
-| Repo | Focus | Status | Description |
-|---|---|---|---|
-| [NeutralSubstrate (Lean 4)](https://github.com/structural-explainability/NeutralSubstrate) | Neutrality constraint | ![CI](https://github.com/structural-explainability/NeutralSubstrate/actions/workflows/ci.yml/badge.svg?branch=main) | Proves an impossibility result: substrates stable under incompatible extensions must be pre-causal and pre-normative. |
-| [IdentityRegimes (Lean 4)](https://github.com/structural-explainability/IdentityRegimes) | Structural necessity | ![CI](https://github.com/structural-explainability/IdentityRegimes/actions/workflows/ci.yml/badge.svg?branch=main) | Shows that exactly six identity-and-persistence regimes are necessary and sufficient for accountability-oriented substrates under neutrality and independence assumptions. |
-| [AccountableEntities (Lean 4)](https://github.com/civic-interconnect/AccountableEntities) | Entity-regime instantiation | ![CI](https://github.com/civic-interconnect/AccountableEntities/actions/workflows/ci.yml/badge.svg) | Formalizes the bijective mapping from named accountable entity kinds to the six necessary and sufficient identity regimes established in the Structural Explainability framework. |
-| [ExchangeProtocol (Lean 4)](https://github.com/civic-interconnect/ExchangeProtocol) | Structural records & exchange substrate | ![CI](https://github.com/civic-interconnect/ExchangeProtocol/actions/workflows/ci.yml/badge.svg) | Defines the neutral, time-parametric record structures (entity, relationship, exchange) and envelopes required to represent accountable exchanges without embedding causal, normative, or domain semantics. |
-| [paper-100-neutral-substrate](https://github.com/structural-explainability/paper-100-neutral-substrate) | Paper companion | Submitted | Narrative exposition of the neutrality result and its formal proof. |
-| [paper-200-identity-regimes](https://github.com/structural-explainability/paper-200-identity-regimes) | Paper companion | Submitted | Narrative exposition of the identity-regimes result and its formal proof. |
-
+-   Foundations - see [structural-explainability](https://github.com/structural-explainability)
 
 ## Civic Interconnect
 
+- [Website](https://civic-interconnect.github.io/site/)
+- [Website Repo](https://github.com/civic-interconnect/site)
 - [Civic Interconnect: Theory](https://github.com/civic-interconnect/cep-theory)
     - [DRAFT 00P1_cae_ontology.pdf](https://github.com/civic-interconnect/cep-theory/blob/main/00P1_cae_ontology.pdf)
     - [DRAFT 00P2_cep_semantics.pdf](https://github.com/civic-interconnect/cep-theory/blob/main/00P2_cep_semantics.pdf)

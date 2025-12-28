@@ -131,3 +131,6 @@ zig-out/
 .zig-cache/
 zig-cache/
 
+# Project specific ignores
+redirect-report-ci.csv
+redirect-report-se.csv
