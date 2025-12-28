@@ -3,7 +3,7 @@
 # WHY-FILE: Resolve and report HTTP redirect behavior for domain portfolios using a reliable HttpClient pipeline.
 
 param(
-  [ValidateSet("se","ci","all","custom")]
+  [ValidateSet("se", "ci", "all", "custom")]
   [string]$DomainProfile = "all",
 
   # Used only when DomainProfile = custom
@@ -30,47 +30,74 @@ Write-Host ("Script: {0}" -f $PSCommandPath)
 Write-Host ("Params: Canonical='{0}' OutCsv='{1}' DomainProfile='{2}'" -f $Canonical, $OutCsv, $DomainProfile)
 Write-Host ""
 
+function Get-HostAddresses([string]$hostname) {
+  try {
+    $addrs = [System.Net.Dns]::GetHostAddresses($hostname)
+    return $addrs | ForEach-Object { $_.IPAddressToString }
+  }
+  catch {
+    return @()
+  }
+}
+
+function Test-TcpPort([string]$hostname, [int]$port, [int]$timeoutSec) {
+  $client = New-Object System.Net.Sockets.TcpClient
+  try {
+    $iar = $client.BeginConnect($hostname, $port, $null, $null)
+    $ok = $iar.AsyncWaitHandle.WaitOne([TimeSpan]::FromSeconds($timeoutSec))
+    if (-not $ok) { return $false }
+    $client.EndConnect($iar) | Out-Null
+    return $true
+  }
+  catch {
+    return $false
+  }
+  finally {
+    $client.Close()
+  }
+}
+
 function Get-DomainProfileConfig([string]$p) {
   switch ($p) {
     "se" {
       return @{
-        Name = "se"
+        Name      = "se"
         Canonical = "https://structuralexplainability.org"
-        Domains = @(
+        Domains   = @(
           "structural-explainability.com",
           "structural-explainability.org",
           "structuralexplainability.com",
           "structuralexplainability.org"
         )
-        OutCsv = "./redirect-report-se.csv"
+        OutCsv    = "./redirect-report-se.csv"
       }
     }
     "ci" {
       return @{
-        Name = "ci"
+        Name      = "ci"
         Canonical = "https://civicinterconnect.org"
-        Domains = @(
+        Domains   = @(
           "civicinterconnect.com",
           "civicinterconnect.org",
           "civicinterconnect.net"
         )
-        OutCsv = "./redirect-report-ci.csv"
+        OutCsv    = "./redirect-report-ci.csv"
       }
     }
     "all" {
       return @{
-        Name = "all"
+        Name      = "all"
         Canonical = ""
-        Domains = @()
-        OutCsv = ""
+        Domains   = @()
+        OutCsv    = ""
       }
     }
     "custom" {
       return @{
-        Name = "custom"
+        Name      = "custom"
         Canonical = ""
-        Domains = @()
-        OutCsv = "./redirect-report-custom.csv"
+        Domains   = @()
+        OutCsv    = "./redirect-report-custom.csv"
       }
     }
     default {
@@ -79,7 +106,7 @@ function Get-DomainProfileConfig([string]$p) {
   }
 }
 
-function Normalize-Url([string]$u) {
+function Format-Url-Normal([string]$u) {
   # WHY: Normalize trivial variants so canonical comparisons are stable.
   try {
     $uri = [Uri]$u
@@ -102,7 +129,8 @@ function Normalize-Url([string]$u) {
     }
 
     return $uri.AbsoluteUri.Trim()
-  } catch {
+  }
+  catch {
     return $u.Trim()
   }
 }
@@ -112,7 +140,8 @@ function Resolve-AbsoluteUrl([string]$baseUrl, [string]$location) {
     $base = [Uri]$baseUrl
     $target = [Uri]::new($base, $location)
     return $target.AbsoluteUri
-  } catch {
+  }
+  catch {
     return $location
   }
 }
@@ -137,39 +166,45 @@ function New-HttpClient([int]$timeoutSec) {
 }
 
 function Get-RedirectStep([System.Net.Http.HttpClient]$client, [string]$url) {
-  $req = New-Object System.Net.Http.HttpRequestMessage([System.Net.Http.HttpMethod]::Get, $url)
+  $methods = @([System.Net.Http.HttpMethod]::Head, [System.Net.Http.HttpMethod]::Get)
 
-  try {
-    # WHY: Read headers only; no need for full body.
-    $resp = $client.Send($req, [System.Net.Http.HttpCompletionOption]::ResponseHeadersRead)
+  foreach ($m in $methods) {
+    $req = New-Object System.Net.Http.HttpRequestMessage($m, $url)
+    try {
+      $resp = $client.Send($req, [System.Net.Http.HttpCompletionOption]::ResponseHeadersRead)
 
-    $status = [int]$resp.StatusCode
-    $loc = $null
-    if ($resp.Headers.Location) { $loc = $resp.Headers.Location.ToString() }
+      $status = [int]$resp.StatusCode
+      $loc = $null
+      if ($resp.Headers.Location) { $loc = $resp.Headers.Location.ToString() }
 
-    # Ensure disposal
-    $resp.Dispose()
-    $req.Dispose()
+      $resp.Dispose()
+      $req.Dispose()
 
-    return [pscustomobject]@{
-      StatusCode = $status
-      Location  = $loc
-      Error     = $null
+      return [pscustomobject]@{
+        StatusCode = $status
+        Location   = $loc
+        Error      = $null
+      }
     }
-  } catch [System.Threading.Tasks.TaskCanceledException] {
-    $req.Dispose()
-    return [pscustomobject]@{
-      StatusCode = $null
-      Location  = $null
-      Error     = "Timeout"
+    catch [System.Threading.Tasks.TaskCanceledException] {
+      $req.Dispose()
+      # try next method
+      continue
     }
-  } catch {
-    $req.Dispose()
-    return [pscustomobject]@{
-      StatusCode = $null
-      Location  = $null
-      Error     = $_.Exception.Message
+    catch {
+      $req.Dispose()
+      return [pscustomobject]@{
+        StatusCode = $null
+        Location   = $null
+        Error      = $_.Exception.Message
+      }
     }
+  }
+
+  return [pscustomobject]@{
+    StatusCode = $null
+    Location   = $null
+    Error      = "Timeout"
   }
 }
 
@@ -179,8 +214,8 @@ function Resolve-RedirectChain([System.Net.Http.HttpClient]$client, [string]$sta
 
   $step = Get-RedirectStep -client $client -url $current
   $startCode = $step.StatusCode
-  $startLoc  = $step.Location
-  $startErr  = $step.Error
+  $startLoc = $step.Location
+  $startErr = $step.Error
 
   while ($hops -lt $maxHops) {
     if ($null -eq $step.StatusCode) { break }
@@ -236,7 +271,7 @@ function Invoke-RedirectReport([string[]]$domains, [string]$canonical, [string]$
   Write-Host ("URLs to test: {0}" -f $tests.Count)
   Write-Host ""
 
-  $canonicalNorm = Normalize-Url $canonical
+  $canonicalNorm = Format-Url-Normal $canonical
 
   $rows = New-Object System.Collections.Generic.List[object]
   $client = New-HttpClient -timeoutSec $timeoutSec
@@ -247,37 +282,63 @@ function Invoke-RedirectReport([string[]]$domains, [string]$canonical, [string]$
       $i++
       Write-Host ("[{0}/{1}] {2}" -f $i, $tests.Count, $t)
 
+      # === Pre-flight HTTPS diagnostics (before redirect resolution) ===
+      try {
+        $uri = [Uri]$t
+        if ($uri.Scheme -eq "https") {
+          $hostname = $uri.Host
+
+          $ips = Get-HostAddresses -host $hostname
+          if ($ips.Count -gt 0) {
+            Write-Host ("  DNS: {0}" -f ($ips -join ", "))
+          }
+          else {
+            Write-Host "  DNS: (no addresses resolved)"
+          }
+
+          $tcpOk = Test-TcpPort -host $hostname -port 443 -timeoutSec 3
+          Write-Host ("  TCP 443: {0}" -f ($(if ($tcpOk) { "ok" } else { "fail" })))
+        }
+      }
+      catch {
+        # intentionally ignore diagnostic failures
+      }
+
+      # === Redirect resolution ===
       $r = Resolve-RedirectChain -client $client -startUrl $t -maxHops $maxHops
+
 
       if ($null -eq $r.StartCode) {
         Write-Host ("  -> ERROR: {0}" -f $r.StartErr)
-      } else {
+      }
+      else {
         Write-Host ("  -> {0} hops={1} final={2}" -f $r.StartCode, $r.HopCount, $r.FinalUrl)
       }
 
-      $finalNorm = Normalize-Url $r.FinalUrl
+      $finalNorm = Format-Url-Normal $r.FinalUrl
       $match = ($finalNorm -eq $canonicalNorm)
 
       $rows.Add([pscustomobject]@{
-        StartUrl            = $r.StartUrl
-        StartStatus         = $r.StartCode
-        StartLocation       = $r.StartLoc
-        StartError          = $r.StartErr
-        FinalUrl            = $r.FinalUrl
-        FinalUrlNormalized  = $finalNorm
-        Canonical           = $canonical
-        CanonicalNormalized = $canonicalNorm
-        MatchesCanonical    = $match
-        HopCount            = $r.HopCount
-      })
+          StartUrl            = $r.StartUrl
+          StartStatus         = $r.StartCode
+          StartLocation       = $r.StartLoc
+          StartError          = $r.StartErr
+          FinalUrl            = $r.FinalUrl
+          FinalUrlNormalized  = $finalNorm
+          Canonical           = $canonical
+          CanonicalNormalized = $canonicalNorm
+          MatchesCanonical    = $match
+          HopCount            = $r.HopCount
+        })
     }
-  } finally {
+  }
+  finally {
     $client.Dispose()
   }
 
   $rows |
-    Sort-Object MatchesCanonical, StartUrl |
-    Format-Table StartStatus, MatchesCanonical, HopCount, StartUrl, StartLocation, FinalUrl -AutoSize
+  Sort-Object MatchesCanonical, StartUrl |
+  Format-Table StartStatus, MatchesCanonical, HopCount, StartUrl, StartLocation, FinalUrl -AutoSize
 
   $rows | Export-Csv -NoTypeInformation -Encoding UTF8 -Path $outCsv
   Write-Host ""
