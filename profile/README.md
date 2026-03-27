@@ -6,10 +6,15 @@
 
 > Connecting civic data from public sources to support transparency, interoperability, and civic insights.
 
-## Decision Explorer: Data Centers
+## ⭐Interactive Explorer: Data Centers
 
 - [**Try the Interactive Explorer**](https://civic-interconnect.github.io/decision_explorer_data_centers/explorer/)
 - [Source](https://github.com/civic-interconnect/decision_explorer_data_centers)
+
+## ⭐Interactive Explorer: Age Verification
+
+- [**Try the Interactive Explorer**](https://civic-interconnect.github.io/explorer-age-verification/explorer/)
+- [Source](https://github.com/civic-interconnect/explorer-age-verification)
 
 ## Structural Explainability
 
