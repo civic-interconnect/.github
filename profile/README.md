@@ -6,15 +6,23 @@
 
 > Connecting civic data from public sources to support transparency, interoperability, and civic insights.
 
-## ⭐Interactive Explorer: Data Centers
+## Multidimensional Evaluation
 
-- [**Try the Interactive Explorer**](https://civic-interconnect.github.io/decision_explorer_data_centers/explorer/)
-- [Source](https://github.com/civic-interconnect/decision_explorer_data_centers)
+### ⭐Interactive Explorer: Data Centers
 
-## ⭐Interactive Explorer: Age Verification
+- [**Interactive Explorer**](https://civic-interconnect.github.io/decision_explorer_data_centers/explorer/)
+- [Repository](https://github.com/civic-interconnect/decision_explorer_data_centers)
 
-- [**Try the Interactive Explorer**](https://civic-interconnect.github.io/explorer-age-verification/explorer/)
-- [Source](https://github.com/civic-interconnect/explorer-age-verification)
+### ⭐Interactive Explorer: Age Verification
+
+- [**Interactive Explorer**](https://civic-interconnect.github.io/explorer-age-verification/explorer/)
+- [Repository](https://github.com/civic-interconnect/explorer-age-verification)
+
+Explorers are based on the Multidimensional Evaluation Engine:
+A domain-neutral engine for multidimensional evaluation under explicit policy assumptions.
+
+- [multidimensional-evaluation-engine](https://github.com/civic-interconnect/multidimensional-evaluation-engine)
+- [On PyPi](https://pypi.org/project/multidimensional-evaluation-engine/)
 
 ## Structural Explainability
 
