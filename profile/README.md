@@ -22,6 +22,20 @@ To point an app at a different dataset, rewrite its `s00` source adapter
 so the output matches the canonical schema. 
 Everything from `s01` onward keeps working.
 
+### Drill-down Big Data Local Dashboard (with Python and FlexViz)
+
+| App | Question | Visual | Interactive Explorer | Repository |
+| --- | --- | --- | --- | --- |
+| `dashboard-tracr` | All four questions at once, linked and cross-filtered | Linked dashboard (line · histogram · 2D histogram · correlation heatmap) | Run locally (`flexviz serve`) | [Repository](https://github.com/civic-interconnect/dashboard-tracr) |
+
+Runs locally rather than on GitHub Pages: 
+FlexViz answers each zoom, brush, and cross-filter from server-side Polars aggregations, 
+so it needs a running Python process. 
+Same layered architecture as the charting apps.
+The `s00`–`s02`data spine ports unchanged; 
+only the view layer differs (a FlexViz `Dashboard` of linked figures 
+in place of `s03`/`s04` renderers).
+
 ## Multidimensional Evaluation
 
 ### Interactive Explorer: Data Centers
