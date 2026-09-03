@@ -6,10 +6,21 @@
 
 > Connecting civic data from public sources to support transparency, interoperability, and civic insights.
 
-## ⭐Reactive Charting (with Python, marimo, Altair, FlexViz, Plotly, and Matplotlib)
+## ⭐ Reactive Charting (with Python, marimo, Altair, FlexViz, Plotly, and Matplotlib)
 
-- [**Interactive Explorer**](https://civic-interconnect.github.io/trend-tracr/)
-- [Repository](https://github.com/civic-interconnect/trend-tracr)
+### Community Resilience (NIST TraCR)
+
+| App | Question | Visual | Interactive Explorer | Repository |
+| --- | --- | --- | --- | --- |
+| `trend-tracr` | How does one indicator change over time? | Line chart | [Trend Charts](https://civic-interconnect.github.io/trend-tracr/) | [Repository](https://github.com/civic-interconnect/trend-tracr) |
+| `compare-tracr` | How do counties compare on one indicator? | Line / bar chart | [Compare Charts](https://civic-interconnect.github.io/compare-tracr/) | [Repository](https://github.com/civic-interconnect/compare-tracr) |
+| `distribution-tracr` | How is one indicator distributed across counties? | Histogram / bar chart | [Distribution Charts](https://civic-interconnect.github.io/distribution-tracr/) | [Repository](https://github.com/civic-interconnect/distribution-tracr) |
+| `relationship-tracr` | How are two indicators related? | Scatter plot | [Relationship Charts](https://civic-interconnect.github.io/relationship-tracr/) | [Repository](https://github.com/civic-interconnect/relationship-tracr) |
+
+Each repository uses the same layered architecture.
+To point an app at a different dataset, rewrite its `s00` source adapter 
+so the output matches the canonical schema. 
+Everything from `s01` onward keeps working.
 
 ## Multidimensional Evaluation
 
