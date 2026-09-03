@@ -6,7 +6,7 @@
 
 > Connecting civic data from public sources to support transparency, interoperability, and civic insights.
 
-## ⭐ Reactive Charting (with Python, marimo, Altair, FlexViz, Plotly, and Matplotlib)
+## ⭐ Reactive Charting (with Python, marimo, Altair, Plotly, and Matplotlib)
 
 ### Community Resilience (NIST TraCR)
 
