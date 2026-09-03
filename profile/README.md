@@ -32,9 +32,9 @@ Runs locally rather than on GitHub Pages:
 FlexViz answers each zoom, brush, and cross-filter from server-side Polars aggregations, 
 so it needs a running Python process. 
 Same layered architecture as the charting apps.
-The `s00`–`s02`data spine ports unchanged; 
+The `s00`, `s01`, and `s02`port unchanged; 
 only the view layer differs (a FlexViz `Dashboard` of linked figures 
-in place of `s03`/`s04` renderers).
+in place of `s03`view and `s04` renderers).
 
 ## Multidimensional Evaluation
 
