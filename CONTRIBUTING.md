@@ -1,24 +1,26 @@
 # Contributing to Civic Interconnect
 
-Thank you for your interest in contributing.  
-This document provides a lightweight, consistent workflow used across all Civic Interconnect repositories.
+Thank you for your interest in contributing.
+This document provides a lightweight, consistent workflow
+used across all Civic Interconnect repositories.
 
 ## 1. Prerequisites
 
 Install the following tools:
 
-- Git  
-- VS Code (recommended)  
-- Python 3.12+  
-- **uv** (package and environment manager)  
+- Git
+- VS Code (recommended)
+- Python 3.12+
+- **uv** (package and environment manager)
+- **ty** (Python type checking)
 - pre-commit (installed via uv)
 
 ## 2. Fork and Clone
 
-1. Fork the repository on GitHub.  
+1. Fork the repository on GitHub.
 2. Clone your fork and open it in VS Code.
 
-```
+```shell
 git clone https://github.com/YOUR_USERNAME/REPO_NAME.git
 cd REPO_NAME
 ```
@@ -41,12 +43,12 @@ uv run pre-commit install
 
 Run standard local checks (these match CI).
 
-```
+```shell
 git pull origin main
 uvx ruff check . --fix
 uvx ruff format .
 uvx deptry .
-uv run pyright
+uv run ty check
 uv run pytest
 uvx pre-commit autoupdate
 uvx pre-commit run --all-files
@@ -56,30 +58,23 @@ uvx pre-commit run --all-files
 
 Most repositories include a `provenance/ptag.json` file that records:
 
-- who created the repo  
-- data sources used  
-- scripts or adapters used  
+- who created the repo
+- data sources used
+- scripts or adapters used
 - schema versions
 
 To validate it:
 
-```
+```shell
 uvx ajv-cli -s SCHEMA_URL -d provenance/ptag.json
 ```
 
-See the org-wide overview:  
+See the org-wide overview:
 `docs/provenance-and-schemas-overview.md`
 
-## 6. Building Docs (if the repo has documentation)
+## 6. Commit and Push
 
-```
-uv run mkdocs build --strict
-uv run mkdocs serve
-```
-
-## 7. Commit and Push
-
-```
+```shell
 git add .
 git commit -m "Your message"
 git push -u origin main
@@ -89,10 +84,10 @@ git push -u origin main
 
 Open a PR from your fork to the `main` branch of the target repository.
 
-Guidelines for good PRs are here:  
+Guidelines for good PRs are here:
 `REF_PULL_REQUESTS.md`
 
 ---
 
-If you have questions, open an issue in the target repository.  
+If you have questions, open an issue in the target repository.
 Thank you for contributing to Civic Interconnect.
